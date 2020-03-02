@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}
+
+/* banner的css-------------------------------------------------- */
+.allBanner{
+    width: 100%;
+    height: 90px;
+    background-color: #333;
+    line-height: 90px;
+    position: relative;
+}
+.allBanner ul{
+    margin-left: 200px;
+}
+.allBanner ul li{
+    list-style: none;
+    float: left;
+    margin-right: 30px;
+}
+.allBanner li a{
+    color: #fff;
+    text-decoration: none;
+}
+#banner-login,#banner-apply{
+    padding: 0 10px;
+}
+.allBanner ul .banner-login,.allBanner ul .banner-apply{
+    float: right;
+}
+/* 注册和登录 */
+.loginPage-box{
+    padding: 300px 300px;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+    position: relative;
+    z-index: 999;
+}
+.allBanner .loginPage{
+    width: 240px;
+    height: 320px;
+    background-color: lightgray;
+    position: absolute;
+    top: 150px;
+    left: 500px;
+    z-index: 999;
+    line-height: 0;
+    padding: 20px;
+}
+.allBanner .loginPage p{
+    margin: 15px 0;
+}
+.login-apply{
+    padding-bottom: 15px;
+    position: relative;
+}
+.banner-login,.banner-apply:hover{
+    cursor: pointer;
+}
+.loginText{
+    background-color: #fff;
+    padding: 6px 37px;
+}
+.applyText{
+    background-color: orange;
+    padding: 6px 38px;
+    margin-left: 11px;
+    color: white;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-top: solid  12px #fff;
+    border-bottom: solid 12px transparent;
+    border-left: solid  12px transparent;
+    border-right: solid  12px transparent;
+    position: absolute;
+    top: 51px;
+    left: 60px;
+}
+#username,#password,.loginBtn{
+    height: 30px;
+    width: 100%;
+}
+#loginNum{
+    padding-bottom: 10px;
+}
+#loginNum input{
+    width: 48%;
+    height: 30px;
+}
+#loginNum span{
+    padding: 5.5px 23%;
+    background-color: #fff;
+    margin-left: 10px;
+    position: relative;
+    top: 2px;
+    left: 3px;
+}
+.loginBtn{
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    background-color: green;
+    line-height: 30px;
+    color: #fff;
+}
+.otherMath{
+    padding-top: 15px;
+    font-size: 12px;
+}
+.login-logo img{
+    width: 30px;
+    margin-right: 5px;
+}

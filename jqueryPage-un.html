@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/zxf_page.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+
+<body>
+    <!-- 1.header------------------------------------------------------------------------------------->
+    <div class="header">
+        <div class="container">
+            <ul>
+                <li> <a href="">首页</a></li>
+                <li> <a href="">乐章</a></li>
+                <li><a href="">听说</a></li>
+                <li><a href="">乐趣</a></li>
+                <li><a href="">聊聊</a></li>
+                <li><a href="">游记</a></li>
+                <li><a href="">摄影</a></li>
+                <li><a href="">诚品</a></li>
+                <li><a href="">蓝莓酱</a></li>
+                <li><a href="">社区</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /header---------------------------------------------------->
+
+    <!-- 分页内容 --------------------------------->
+
+    <div class="paging-box">
+        <div class="wrap">
+            <ul>
+                <!-- <li>
+                    <h3>title</h3>
+                    <img src="" alt="">
+                </li> -->
+            </ul>
+        </div>
+
+    </div>
+    <!-- 引入插件 -->
+    <div class="zxf_pagediv"></div>
+    <!-- /分页内容 --------------------------------->
+
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/zxf_page.js"></script>
+    <script>
+        
+        //思路：
+        // 1.进入页码加载第一页数据
+        //2.点击分页显示对应页码的数据
+        function getData(num) {
+            $.ajax({
+                type: 'get',
+                url: 'http://iwenwiki.com/api/blueberrypai/getBlueBerryJamInfo.php',
+                data: { 
+                    blueBerryjam_id: num//页码
+                },
+                success: function (res) {
+                    //数据成功后 开始接收分页里的数据(只需要调用一次)
+                    // console.log(res);
+                    var arr = res.blueBerryJam;
+                    console.log(arr);
+                    var str='';
+                    for(var i=0; i<arr.length;i++){
+                        str+=`<li>
+                            <h3>${arr[i].title}</h3>
+                                <img src="" alt="">
+                            </li>`;
+                    }
+                    $('.paging-box ul').html(str);
+                    if(num==1){
+                        paging(res.maxPage,num);
+                    }
+                }
+            })
+        }
+        //先加载第一页的数据
+        getData(1);
+        //分页
+        function paging(page,cur) {
+            $(".zxf_pagediv").createPage({
+                pageNum: page,
+                current: cur,
+                backfun: function (e) {
+                    console.log(e.current);//回调
+                    //点击分页 请求第二页数据
+                    getData(e.current);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

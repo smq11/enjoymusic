@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    vertical-align: middle;
+}
+/* header */
+.musicTopic-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+body{
+    background: #f5f5f5;
+}
+/* movement */
+.musicTopic-movement{
+    background: #f5f5f5;
+    height: 400px;
+    margin: 40px auto;
+    border-radius: 10px;
+}
+.movementHeader{
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+}
+.movementHeader .title{
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+.movementHeader .play{
+    float: right;
+}
+.play span{
+    color: green;
+}
+.middleEle{
+    width: 1200px;
+    position: relative;
+    height: 290px;
+    line-height: 290px;
+    padding-left: 30px;
+    background: url(../img/song-background_03.png);
+}
+
+.middleText{
+    width: 850px;
+    height: 20px;
+    position: absolute;
+    left: 300px;
+    top: 20px;
+    color: white;
+    line-height: 25px;
+    text-align: left; 
+}
+/* 按钮进度条 */
+.movementBottom{
+    height: 56px;
+    line-height: 56px;
+}
+.playMusic{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    margin-top: 8px;
+    margin-left: 60px;
+    text-align: center;
+    position: relative;
+}
+.playMusic img{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+.movementBottom>div{
+    float: left;
+}
+.current{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.progress{
+    height: 10px;
+    width: 900px;
+    margin-top: 23px;
+    background: #d3ede0;
+    border-radius: 5px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.innerProgress{
+    height: 10px;
+    width: 0;
+    background: green;
+}
+.articleLeft{
+    width: 67%;
+    float: left;
+}
+.articleRight{
+    width: 20%;
+    height: 200px;
+    float: right;
+}
+.articleLeft,.articleRight{
+    border: solid 1px rgba(0, 0, 0, .1);
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1)
+}
+.articleLeft h2{
+    text-align: center;
+    padding-top: 20px;
+    margin: 0 auto;
+    font-size: 22px;
+}
+.articleLeft ul{
+    width: 100%;
+    height: 50px;
+    line-height: 10px;
+}
+.articleLeft ul>li{
+    color: rgba(0, 0, 0, .5);
+    font-size: 14px;
+    margin-top: 15px;
+}
+.articleEye,.articleChat{
+    float: left;
+    margin-right: 40px;
+}
+.articleTime{
+    float: right;
+}
+.articleLeft .line{
+    border: solid 1px rgba(0, 0, 0, .1);
+    margin-top: 20px;
+}
+.articleLeft .articleText{
+    margin-top: 30px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    color: rgb(102, 102, 102);
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+.articleLeft .travel li{
+    float: left;
+    margin-top: 12px;
+    color: #fff;
+    font-size: 12px;
+    background-color: #999;
+    margin-right: 12px;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+.articleLeft .travel .lableOne{
+    background-color: #fff;
+}
+.articleEnd{
+    text-align: center;
+    padding: 15px 0;
+}
+.someRead{
+    padding-top: 30px;
+    margin-bottom: -10px;
+}
+
